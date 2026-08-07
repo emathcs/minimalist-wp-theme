@@ -1,2 +1,2 @@
-# wabi-sabi
+# Minimalist
 WordPress theme.
