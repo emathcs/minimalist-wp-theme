@@ -72,6 +72,19 @@
             <footer id="colophon" class="site-footer row">
                 <?php wp_footer(); ?>
             </footer>
+            <script>
+                document.addEventListener("DOMContentLoaded", function(){
+                    window.addEventListener('scroll', function() {
+                        if (window.scrollY > 10) {
+                            document.getElementById('site-navigation').classList.add('navbar-scrolled');
+                            document.getElementById('site-navigation').classList.remove('navbar-dark');
+                        } else {
+                            document.getElementById('site-navigation').classList.remove('navbar-scrolled');
+                            document.getElementById('site-navigation').classList.remove('navbar-light');
+                        }
+                    });
+                });
+            </script>
         </div>
     </body>
 </html>
