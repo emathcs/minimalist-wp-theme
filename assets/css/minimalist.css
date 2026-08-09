@@ -1,0 +1,28 @@
+.site {
+    margin-top: 80px;
+}
+
+/* Menu */
+@media (max-width: 991.98px) {
+    .navbar {
+        background-color: #fff;
+        border-bottom: 1px solid rgba(221, 221, 221, 1);
+        box-shadow: 0 0 transparent, 0 0 transparent, 0 5px 5px -4px rgba(0, 0, 0, .1);
+    }
+}
+.navbar {
+    border-bottom: 1px transparent;
+}
+.navbar.navbar-scrolled {
+    border-bottom: 1px solid rgba(221, 221, 221, 1);
+}
+.navbar-scroll {
+    transition: all 500ms cubic-bezier(.445,.05,.55,.95);
+    transition-timing-function: cubic-bezier(.445,.05,.55,.95);
+}
+.navbar-scrolled {
+    background-color: #fff;
+    transition: all 500ms cubic-bezier(.445,.05,.55,.95);
+    transition-timing-function: cubic-bezier(.445,.05,.55,.95);
+    box-shadow: 0 0 transparent, 0 0 transparent, 0 5px 5px -4px rgba(3, 27, 78, 0.25);
+}
