@@ -109,3 +109,6 @@ function minimalist_scripts() {
     wp_enqueue_script( 'bootstrap_js', get_stylesheet_directory_uri() . '/assets/js/bootstrap.min.js', array(), BS_VERSION );
 }
 add_action( 'wp_enqueue_scripts', 'minimalist_scripts' );
+
+// Menu
+require get_template_directory() . '/wp-includes/class-custom-walker-nav-menu.php';
