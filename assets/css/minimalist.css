@@ -26,3 +26,13 @@
     transition-timing-function: cubic-bezier(.445,.05,.55,.95);
     box-shadow: 0 0 transparent, 0 0 transparent, 0 5px 5px -4px rgba(3, 27, 78, 0.25);
 }
+.nav-link {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.30px;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.5);
+}
+.current_page_item .nav-link {
+    color: #000;
+}
