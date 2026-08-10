@@ -1,5 +1,28 @@
+/* Fonts */
+* {
+    font: 16px/26px 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+h2,
+.h1,
+.h2 {
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Site */
 .site {
     margin-top: 80px;
+}
+
+.site-title,
+.site-title .h1 {
+    margin-bottom: 0;
 }
 
 /* Menu */
