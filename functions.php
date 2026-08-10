@@ -106,6 +106,7 @@ function minimalist_scripts() {
     wp_enqueue_style( 'minimalist-style', get_stylesheet_uri(), array(), T_VERSION );
     wp_enqueue_style( 'bootstrap_css', get_stylesheet_directory_uri() . '/assets/css/bootstrap.min.css', array(), BS_VERSION );
     wp_enqueue_style( 'minimalist_css', get_stylesheet_directory_uri() . '/assets/css/minimalist.css', array(), T_VERSION );
+    wp_enqueue_style( 'montserrat_font', get_stylesheet_directory_uri() . '/assets/fonts/montserrat.css', array(), T_VERSION );
     wp_enqueue_script( 'bootstrap_js', get_stylesheet_directory_uri() . '/assets/js/bootstrap.min.js', array(), BS_VERSION );
 }
 add_action( 'wp_enqueue_scripts', 'minimalist_scripts' );
