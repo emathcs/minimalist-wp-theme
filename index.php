@@ -17,9 +17,9 @@
                             <nav id="site-navigation" class="main-navigation navbar navbar-expand-lg navbar-scroll">
                                 <div class="site-branding">
                                     <?php echo the_custom_logo(); ?>
-                                    <p class="site-title">
-                                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="h1"><?php bloginfo( 'name' ); ?></a>
-                                    </p>
+                                    <<?php echo is_front_page() ? 'h1' : 'p'; ?> class="site-title">
+                                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+                                    </<?php echo is_front_page() ? 'h1' : 'p'; ?>>
                                     <?php  if ( get_bloginfo( 'description', 'display' ) || is_customize_preview() ) : ?>
                                         <p class="site-description"><?php echo get_bloginfo( 'description', 'display' ); ?></p>
                                     <?php endif; ?>
@@ -54,7 +54,9 @@
                                 <?php if ( have_posts() ) : ?>
                                     <?php while ( have_posts() ) : ?>
                                         <?php the_post(); ?>
-                                        <h3><?php the_title(); ?></h3>
+                                        <<?php echo ! is_front_page() ? 'h1' : 'p'; ?> class="site-content-title">
+                                            <?php the_title(); ?>
+                                        </<?php echo ! is_front_page() ? 'h1' : 'p'; ?>>
                                         <?php the_content(); ?>
                                         <?php wp_link_pages(); ?>
                                         <?php edit_post_link(); ?>
