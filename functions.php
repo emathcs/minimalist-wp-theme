@@ -33,7 +33,8 @@ function minimalist_setup() {
     // Primary menu: wp_nav_menu().
     register_nav_menus(
         array(
-            'primary' => esc_html__( 'Primary', 'minimalist' ),
+            'primary'   => esc_html__( 'Primary', 'minimalist' ),
+            'secondary' => esc_html__( 'Secondary', 'minimalist' ),
         )
     );
 
@@ -113,3 +114,28 @@ add_action( 'wp_enqueue_scripts', 'minimalist_scripts' );
 
 // Menu
 require get_template_directory() . '/wp-includes/class-custom-walker-nav-menu.php';
+
+// Powered by section
+function minimalist_admin_customize_register( $wp_customize ) {
+
+    $wp_customize->add_section( 'minimalist_powered_by' , array(
+        'title'      => __( 'Powered by', 'minimalist' ),
+        'priority'   => 500,
+    ));
+
+    $wp_customize->add_setting( 'minimalist_powered_by_text', array());
+    $wp_customize->add_control(
+        new WP_Customize_Control(
+            $wp_customize,
+            'minimalist_powered_by_text_control',
+            array(
+                'label'    => __( 'Text ', 'minimalist' ),
+                'section'  => 'minimalist_powered_by',
+                'settings' => 'minimalist_powered_by_text',
+                'type'     => 'textarea'
+            )
+        )
+    );
+
+}
+add_action( 'customize_register', 'minimalist_admin_customize_register' );

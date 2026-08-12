@@ -101,8 +101,8 @@ p, li, .nav-link {
     color: #aaaaaa;
 }
 
-.site-info-powered,
-.site-info-powered a {
+.site-info-powered-by,
+.site-info-powered-by a {
     color: #fff;
     font-size: 0.75rem;
     font-weight: 500;
