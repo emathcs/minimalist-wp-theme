@@ -68,7 +68,7 @@ a {
 }
 
 .nav-link:hover {
-    color: #ffa100;
+    color: #F6932C;
 }
 
 .current_page_item .nav-link {
@@ -80,6 +80,34 @@ p, li, .nav-link {
     font-size: 0.95rem;
 }
 
+/* Footer */
+.site-footer {
+    margin-top: 30px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.site-info {
+    padding: 30px;
+    text-align: center;
+    background-color: #2C67F6;
+}
+
+.site-footer-menu a {
+    color: #fff;
+}
+
+.site-footer-menu .current_page_item .nav-link {
+    color: #aaaaaa;
+}
+
+.site-info-powered,
+.site-info-powered a {
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
 @media (min-width: 576px) {
     /* Site */
     .site {
@@ -88,7 +116,7 @@ p, li, .nav-link {
 
     .site-container-row {
         padding: 20px;
-        padding-bottom: 40px;
+        padding-bottom: 15px;
         margin-top: 30px;
         border-radius: 10px;
         box-shadow: rgba(3, 27, 78, 0.25) 0px 0px 20px;

@@ -78,11 +78,37 @@
                         </div>
                     </div>
                     <footer id="colophon" class="site-footer">
-                        <?php wp_footer(); ?>
+                        <div class="site-info">
+                            <nav id="site-navigation-footer" class="main-navigation navbar navbar-expand-lg site-footer-menu">
+                                <div class="navbar-collapse justify-content-center">
+                                    <?php
+                                    if ( has_nav_menu( 'primary' ) ) {
+                                        wp_nav_menu(
+                                            array(
+                                                'theme_location'  => 'primary',
+                                                'menu_id'         => 'footer-menu',
+                                                'container_id'    => 'navbarNav',
+                                                'container_class' => 'navbar-collapse collapse justify-content-end',
+                                                'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                                                'walker'          => new Custom_Walker_Nav_Menu(),
+                                                'container'       => 'ul',
+                                                'menu_class'      => 'navbar-nav'
+                                            )
+                                        );
+                                    }
+                                    ?>
+                                </div>
+                            </nav>
+                            <p class="site-info-powered">
+                                <a href="<?php echo esc_url( __( 'https://www.aomath.com' ) ); ?>">
+                                    Powered by AOMath
+                                </a>
+                            </p>
+                        </div><!-- .site-info -->
                     </footer>
-
                 </div>
             </div>
         </div>
+        <?php wp_footer(); ?>
     </body>
 </html>
