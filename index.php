@@ -79,14 +79,14 @@
                     </div>
                     <footer id="colophon" class="site-footer">
                         <div class="site-info">
-                            <nav id="site-navigation" class="main-navigation navbar navbar-expand-lg site-footer-menu">
+                            <nav id="site-navigation-footer" class="main-navigation navbar navbar-expand-lg site-footer-menu">
                                 <div class="navbar-collapse justify-content-center">
                                     <?php
                                     if ( has_nav_menu( 'primary' ) ) {
                                         wp_nav_menu(
                                             array(
                                                 'theme_location'  => 'primary',
-                                                'menu_id'         => 'primary-menu',
+                                                'menu_id'         => 'footer-menu',
                                                 'container_id'    => 'navbarNav',
                                                 'container_class' => 'navbar-collapse collapse justify-content-end',
                                                 'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
@@ -99,18 +99,10 @@
                                     ?>
                                 </div>
                             </nav>
-                            <p class="site-info-copy">
-                                <a href="<?php echo esc_url( __( 'https://www.aomath.com', 'underscore' ) ); ?>">
-                                    <?php
-                                    /* translators: %s: CMS name, i.e. WordPress. */
-                                    printf( esc_html__( 'Proudly powered by %s', 'underscore' ), 'AOMath' );
-                                    ?>
+                            <p class="site-info-powered">
+                                <a href="<?php echo esc_url( __( 'https://www.aomath.com' ) ); ?>">
+                                    Powered by AOMath
                                 </a>
-                                <span class="sep"> | </span>
-                                <?php
-                                /* translators: 1: Theme name, 2: Theme author. */
-                                printf( esc_html__( 'Copy Right 2026', 'underscore' ) );
-                                ?>
                             </p>
                         </div><!-- .site-info -->
                     </footer>
