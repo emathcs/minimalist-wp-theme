@@ -85,10 +85,10 @@
                                     if ( has_nav_menu( 'primary' ) ) {
                                         wp_nav_menu(
                                             array(
-                                                'theme_location'  => 'primary',
+                                                'theme_location'  => 'secondary',
                                                 'menu_id'         => 'footer-menu',
                                                 'container_id'    => 'navbarNav',
-                                                'container_class' => 'navbar-collapse collapse justify-content-end',
+                                                'container_class' => 'navbar-collapse justify-content-center',
                                                 'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
                                                 'walker'          => new Custom_Walker_Nav_Menu(),
                                                 'container'       => 'ul',
@@ -99,10 +99,14 @@
                                     ?>
                                 </div>
                             </nav>
-                            <p class="site-info-powered">
-                                <a href="<?php echo esc_url( __( 'https://www.aomath.com' ) ); ?>">
+                            <p class="site-info-powered-by">
+                                <?php if ( get_theme_mod( 'minimalist_powered_by_text' ) ) : ?>
+                                <?php echo get_theme_mod( 'minimalist_powered_by_text' ); ?>
+                                <?php else : ?>
+                                <a href="<?php echo esc_url( __( 'https://www.aomath.com' ) ); ?>" target="_blank">
                                     Powered by AOMath
                                 </a>
+                                <?php endif; ?>
                             </p>
                         </div><!-- .site-info -->
                     </footer>
