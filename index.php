@@ -50,27 +50,35 @@
                     </header>
                     <div id="content" class="site-content">
                         <div id="primary" class="content-area">
-                            <main id="main" class="site-main">
+                            <main id="main" class="site-main col-12 col-sm-12">
                                 <?php if ( have_posts() ) : ?>
                                     <?php while ( have_posts() ) : ?>
                                         <?php the_post(); ?>
                                         <<?php echo ! is_front_page() ? 'h1' : 'p'; ?> class="site-content-title">
-                                            <?php the_title(); ?>
+                                        <?php the_title(); ?>
                                         </<?php echo ! is_front_page() ? 'h1' : 'p'; ?>>
                                         <?php the_content(); ?>
                                         <?php wp_link_pages(); ?>
                                         <?php edit_post_link(); ?>
                                     <?php endwhile; ?>
-                                    <?php
-                                    if ( get_next_posts_link() ) {
-                                        next_posts_link();
-                                    }
-                                    ?>
-                                    <?php
-                                    if ( get_previous_posts_link() ) {
-                                        previous_posts_link();
-                                    }
-                                    ?>
+                                    <?php if ( get_previous_posts_link() || get_next_posts_link() ) : ?>
+                                        <div class="site-pagination">
+                                            <div class="site-pagination-previous">
+                                                <?php
+                                                if ( get_previous_posts_link() ) {
+                                                    previous_posts_link();
+                                                }
+                                                ?>
+                                            </div>;
+                                            <div class="site-pagination-next">
+                                                <?php
+                                                if ( get_next_posts_link() ) {
+                                                    next_posts_link();
+                                                }
+                                                ?>
+                                            </div>
+                                        </div>
+                                    <?php endif; ?>
                                 <?php else: ?>
                                     <p>No posts found. :(</p>
                                 <?php endif; ?>
@@ -82,7 +90,7 @@
                             <nav id="site-navigation-footer" class="main-navigation navbar navbar-expand-lg site-footer-menu">
                                 <div class="navbar-collapse justify-content-center">
                                     <?php
-                                    if ( has_nav_menu( 'primary' ) ) {
+                                    if ( has_nav_menu( 'secondary' ) ) {
                                         wp_nav_menu(
                                             array(
                                                 'theme_location'  => 'secondary',
