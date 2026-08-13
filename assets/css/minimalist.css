@@ -108,6 +108,21 @@ p, li, .nav-link {
     font-weight: 500;
 }
 
+.site-pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.site-pagination-previous {
+    align-self: flex-start;
+}
+
+.site-pagination-next {
+    align-self: flex-end;
+}
+
 @media (min-width: 576px) {
     /* Site */
     .site {
