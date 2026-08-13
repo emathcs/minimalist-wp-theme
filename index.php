@@ -79,8 +79,13 @@
                                             </div>
                                         </div>
                                     <?php endif; ?>
+                                    <?php
+                                    if ( comments_open() || get_comments_number() ) {
+                                        comments_template();
+                                    }
+                                    ?>
                                 <?php else: ?>
-                                    <p>No posts found. :(</p>
+                                    <p>No posts found. =(</p>
                                 <?php endif; ?>
                             </main>
                         </div>
