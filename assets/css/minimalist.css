@@ -61,7 +61,6 @@ a {
 }
 
 .nav-link {
-    font-size: 0.95rem;
     font-weight: 500;
     letter-spacing: 0.30px;
     color: #2C67F6;
@@ -76,14 +75,18 @@ a {
 }
 
 /* Font sizes */
-p, li, .nav-link {
+p,
+a,
+li,
+em,
+.nav-link,
+.form-label {
     font-size: 0.95rem;
 }
 
 /* Footer */
 .site-footer {
     margin-top: 30px;
-    padding-top: 30px;
     padding-bottom: 20px;
 }
 
@@ -121,6 +124,52 @@ p, li, .nav-link {
 
 .site-pagination-next {
     align-self: flex-end;
+}
+
+.comment {
+    margin-top: 1rem;
+}
+
+.comments-area {
+    margin-top: 3rem;
+}
+
+.comment-author img {
+    width: 32px;
+}
+
+.comment-metadata a time {
+    font-size: 0.8rem;
+}
+
+.comment-content .alert p {
+    margin-bottom: 0;
+    font-style: italic;
+}
+
+.comment-content .alert {
+    margin-bottom: 0;
+}
+
+.reply a {
+    font-size: 0.8rem;
+}
+
+.comment-author img {
+    display: block;
+}
+
+.fn a {
+    font-weight: bold;
+}
+
+.no-comments {
+    font-weight: 500;
+    margin-top: 2rem;
+}
+
+.comment-respond {
+    margin-top: 1rem;
 }
 
 @media (min-width: 576px) {
