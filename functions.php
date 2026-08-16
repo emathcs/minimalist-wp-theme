@@ -164,3 +164,9 @@ function custom_comment_form_defaults( $form ) {
     return $form;
 }
 add_filter('comment_form_defaults', 'custom_comment_form_defaults');
+
+// Get the site title in a specific form for the primary menu
+function minimalist_get_site_title( $html = '' ) {
+    $h1p = is_front_page() ? 'h1' : 'p';
+    return '<' . $h1p . ' class="site-title"><a href="' . esc_url( home_url( '/' ) ) . '" rel="home">' . $html . '</a></' . $h1p . '>';
+}

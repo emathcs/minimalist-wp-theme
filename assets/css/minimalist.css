@@ -11,7 +11,8 @@ h3,
 .h2,
 .h3,
 .site-title a,
-.site-content-title {
+.site-content-title,
+.site-content-title a {
     color: #000;
     font-weight: bold;
 }
@@ -55,6 +56,10 @@ a {
     padding-bottom: 10px;
 }
 
+h2.site-content-title a {
+  font-size: calc(1.325rem + 0.9vw);
+}
+
 /* Menu */
 .navbar {
     align-items: start;
@@ -96,11 +101,11 @@ em,
     background-color: #2C67F6;
 }
 
-.site-footer-menu a {
+.site-navigation-secondary a {
     color: #fff;
 }
 
-.site-footer-menu .current_page_item .nav-link {
+.site-navigation-secondary .current_page_item .nav-link {
     color: #aaaaaa;
 }
 
@@ -197,5 +202,9 @@ em,
     .site-title a,
     .site-content-title {
         font-size: 2.5rem;
+    }
+
+    h2.site-content-title a {
+        font-size: 2rem;
     }
 }
