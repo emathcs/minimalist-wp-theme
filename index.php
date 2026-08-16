@@ -1,6 +1,6 @@
 <?php
 /**
- * Documentation.
+ *
  */
 
 get_header();
