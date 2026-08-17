@@ -1,4 +1,11 @@
 <?php
+/**
+ * Displays the site navigation.
+ *
+ * @package WordPress
+ * @subpackage Minimalist
+ * @since Minimalist 1.0
+ */
 
 $menu  = isset( $args['menu'] ) ? $args['menu'] : '';
 $classes = [
@@ -13,7 +20,8 @@ $classes = [
         <?php if ( 'primary' === $menu ) : ?>
             <div class="site-branding">
                 <?php echo the_custom_logo(); ?>
-                <?php echo minimalist_get_site_title( get_bloginfo( 'name' ) ); ?>
+                <?php $h1p = is_front_page() ? 'h1' : 'p'; ?>
+                <?php echo '<' . $h1p . ' class="site-title"><a href="' . esc_url( home_url( '/' ) ) . '" rel="home">' . get_bloginfo( 'name' ) . '</a></' . $h1p . '>'; ?>
                 <?php  if ( get_bloginfo( 'description', 'display' ) || is_customize_preview() ) : ?>
                     <p class="site-description"><?php echo get_bloginfo( 'description', 'display' ); ?></p>
                 <?php endif; ?>

@@ -1,6 +1,12 @@
 <?php
 /**
+ * The template for displaying all pages
  *
+ * @link https://developer.wordpress.org/themes/classic-themes/basics/template-hierarchy/#single-page
+ *
+ * @package WordPress
+ * @subpackage Minimalist
+ * @since Minimalist 1.0
  */
 
 get_header();

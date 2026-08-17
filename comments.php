@@ -5,19 +5,22 @@
  * This is the template that displays the area of the page that contains both the current comments
  * and the comment form.
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ * @link https://developer.wordpress.org/themes/classic-themes/basics/template-hierarchy/
  *
- * @package underscore
+ * @package WordPress
+ * @subpackage Minimalist
+ * @since Minimalist 1.0
  */
 
 /*
  * If the current post is protected by a password and
- * the visitor has not yet entered the password we will
+ * the visitor has not yet entered the password,
  * return early without loading the comments.
  */
 if ( post_password_required() ) {
     return;
 }
+
 ?>
 
 <div id="comments" class="comments-area">
@@ -50,7 +53,6 @@ if ( post_password_required() ) {
             <p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'minimalist' ); ?></p>
         <?php endif; ?>
     <?php endif; ?>
-    <?php // Check for have_comments(). ?>
     <?php comment_form(
         array (
             'class_form' => 'col-12 col-sm-6',
