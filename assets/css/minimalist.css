@@ -43,7 +43,7 @@ a {
 }
 
 .site-content-title {
-    margin-bottom: 2.5rem;
+    margin-bottom: 0;
 }
 
 .site-header-container {
@@ -75,6 +75,10 @@ h2.site-content-title a {
     color: #F6932C;
 }
 
+h2.site-content-title a:hover {
+    color: #2C67F6;
+}
+
 .current_page_item .nav-link {
     color: #000;
 }
@@ -87,6 +91,26 @@ em,
 .nav-link,
 .form-label {
     font-size: 0.95rem;
+}
+
+/* Posts */
+article {
+    margin-bottom: 1.5rem;
+}
+
+.entry-header {
+    margin-bottom: 0.5rem;
+}
+
+.entry-meta a,
+.entry-meta time {
+    font-weight: bold;
+}
+
+.entry-meta a,
+.entry-meta span,
+.entry-meta time {
+    font-size: 0.9rem;
 }
 
 /* Footer */
@@ -135,10 +159,6 @@ em,
     margin-top: 1rem;
 }
 
-.comments-area {
-    margin-top: 3rem;
-}
-
 .comment-author img {
     width: 32px;
 }
@@ -171,10 +191,6 @@ em,
 .no-comments {
     font-weight: 500;
     margin-top: 2rem;
-}
-
-.comment-respond {
-    margin-top: 1rem;
 }
 
 @media (min-width: 576px) {
