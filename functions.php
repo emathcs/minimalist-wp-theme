@@ -140,30 +140,11 @@ function minimalist_admin_customize_register( $wp_customize ) {
 }
 add_action( 'customize_register', 'minimalist_admin_customize_register' );
 
-function custom_wrap_comment_text( $comment_text ) {
+// Comment box
+function minimalist_wrap_comment_text( $comment_text ) {
     return '<div class="alert alert-light"><p>' . $comment_text . '</p></div>';
 }
-add_filter( 'comment_text', 'custom_wrap_comment_text' );
-
-function custom_comment_form_defaults( $form ) {
-    // Container width
-    $form['class_form'] = 'col-12 col-sm-6';
-    // Text area
-    $form['comment_field'] = '<div class="mb-3 comment-form-comment"><label for="comment" class="form-label">Comment <span class="required">*</span></label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="" class="form-control"></textarea></div>';
-    // Author
-    $form['fields']['author'] = '<div class="mb-3 comment-form-author"><label for="author" class="form-label">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" autocomplete="name" required="" class="form-control"></div>';
-    // Email
-    $form['fields']['email'] = '<div class="mb-3 comment-form-email"><label for="email" class="form-label">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" autocomplete="email" required="" class="form-control"></div>';
-    // URL
-    $form['fields']['url'] = '<div class="mb-3 comment-form-url"><label for="url" class="form-label">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" autocomplete="url" class="form-control"></div>';
-    // Cookies
-    $form['fields']['cookies'] = '<div class="mb-3 comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" class="form-check-input"> <label for="wp-comment-cookies-consent" class="form-label">Save my name, email, and website in this browser for the next time I comment.</label></div>';
-    // Submit button
-    $form['class_submit'] = 'btn btn-primary';
-
-    return $form;
-}
-add_filter('comment_form_defaults', 'custom_comment_form_defaults');
+add_filter( 'comment_text', 'minimalist_wrap_comment_text' );
 
 // Get the site title in a specific form for the primary menu
 function minimalist_get_site_title( $html = '' ) {
