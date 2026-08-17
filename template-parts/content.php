@@ -1,7 +1,14 @@
 <?php
 /**
+ * Template part for displaying posts
  *
+ * @link https://developer.wordpress.org/themes/classic-themes/basics/template-hierarchy/
+ *
+ * @package WordPress
+ * @subpackage Minimalist
+ * @since Minimalist 1.0
  */
+
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

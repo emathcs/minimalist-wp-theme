@@ -1,6 +1,6 @@
 <?php
 /**
- * minimalist functions and definitions.
+ * Minimalist functions and definitions.
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
@@ -145,9 +145,3 @@ function minimalist_wrap_comment_text( $comment_text ) {
     return '<div class="alert alert-light"><p>' . $comment_text . '</p></div>';
 }
 add_filter( 'comment_text', 'minimalist_wrap_comment_text' );
-
-// Get the site title in a specific form for the primary menu
-function minimalist_get_site_title( $html = '' ) {
-    $h1p = is_front_page() ? 'h1' : 'p';
-    return '<' . $h1p . ' class="site-title"><a href="' . esc_url( home_url( '/' ) ) . '" rel="home">' . $html . '</a></' . $h1p . '>';
-}
