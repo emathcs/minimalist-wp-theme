@@ -51,5 +51,16 @@ if ( post_password_required() ) {
         <?php endif; ?>
     <?php endif; ?>
     <?php // Check for have_comments(). ?>
-    <?php comment_form(); ?>
+    <?php comment_form(
+        array (
+            'class_form' => 'col-12 col-sm-6',
+            'fields' => array(
+                'author' => '<div class="mb-3 comment-form-author"><label for="author" class="form-label">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" autocomplete="name" required class="form-control"></div>',
+                'email'  => '<div class="mb-3 comment-form-email"><label for="email" class="form-label">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" autocomplete="email" required class="form-control"></div>',
+                'cookies' => false,
+            ),
+            'comment_field' => '<div class="mb-3 comment-form-comment"><label for="comment" class="form-label">Comment <span class="required">*</span></label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required class="form-control"></textarea></div>',
+            'class_submit' => 'btn btn-primary'
+        )
+    ); ?>
 </div><!-- #comments -->
