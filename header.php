@@ -28,6 +28,11 @@
                         <div class="col-12 col-sm-12 site-header-container">
                             <?php get_template_part( 'template-parts/menu', 'menu', [ 'menu' => 'primary' ] ); ?>
                         </div>
+                        <?php if ( 'page' === get_post_type() && is_front_page() && get_header_image() ) : ?>
+                            <div class="site-header-image">
+                                <img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+                            </div>
+                        <?php endif; ?>
                     </header>
                     <div id="content" class="site-content">
                         <div id="primary" class="content-area">

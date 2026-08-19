@@ -72,6 +72,23 @@ function minimalist_setup() {
             'flex-height' => true,
         )
     );
+
+    /**
+     * Add support for core custom header image.
+     *
+     * @link https://codex.wordpress.org/Custom_Headers
+     */
+    add_theme_support(
+        'custom-header',
+        array(
+            'default-image'  => '',
+            'width'          => 1920,
+            'height'         => 1080,
+            'flex-width'     => true,
+            'flex-height'    => true,
+            'uploads'        => true,
+        )
+    );
 }
 add_action( 'after_setup_theme', 'minimalist_setup' );
 
