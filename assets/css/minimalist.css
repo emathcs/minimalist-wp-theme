@@ -57,6 +57,10 @@ a {
     border-bottom: 3px solid #2C67F6;
 }
 
+.site-header-image {
+    margin-bottom: 1.75rem;
+}
+
 .site-container-row {
     padding: 10px;
     padding-bottom: 10px;
