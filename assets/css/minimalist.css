@@ -231,6 +231,21 @@ article {
     padding-right: 0;
 }
 
+/* Not result page */
+.no-results p {
+    margin-bottom: 0;
+}
+
+.accordion-header + .no-results {
+    margin-top: 2rem;
+}
+
+.not-found-message,
+.not-results-message {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
 /**
  * Desktop
  */
