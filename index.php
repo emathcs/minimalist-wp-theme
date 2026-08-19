@@ -18,6 +18,18 @@
 get_header();
 ?>
 
+<?php
+
+if ( $wp_query->found_posts ) {
+    get_search_form(
+        array(
+            'total' => (int) $wp_query->found_posts
+        )
+    );
+}
+
+?>
+
 <?php if ( have_posts() ) : ?>
     <?php while ( have_posts() ) : ?>
         <?php the_post(); ?>
