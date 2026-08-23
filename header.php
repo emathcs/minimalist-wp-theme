@@ -21,6 +21,7 @@
         <?php wp_head(); ?>
     </head>
     <body>
+        <?php wp_body_open(); ?>
         <div id="page" class="site">
             <div id="page-container" class="site-container container">
                 <div id="page-container-row" class="site-container-row row">
