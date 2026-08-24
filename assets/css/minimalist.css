@@ -37,6 +37,11 @@ hr.minimalist-hr {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)) !important;
 }
 
+img {
+    width: 100%;
+    height: auto;
+}
+
 /* Site */
 .site {
     margin-bottom: 20px;
@@ -44,6 +49,14 @@ hr.minimalist-hr {
 
 .site-title {
     margin-bottom: 5px;
+}
+
+.site-navigation-primary.fixed-top .site-title a {
+    color: #fff;
+}
+
+.site-navigation-primary.fixed-top.scroll .site-title a {
+    color: #000;
 }
 
 .site-title a,
@@ -56,6 +69,14 @@ hr.minimalist-hr {
 
 .site-content-title {
     margin-bottom: 0;
+}
+
+.site-header.container-fluid {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
 }
 
 .site-header-container {
@@ -87,8 +108,20 @@ h2.site-content-title a {
     color: #2C67F6;
 }
 
-.nav-link:hover {
+.site-navigation-primary.fixed-top .nav-link {
+    color: #eeeeee;
+}
+
+.site-navigation-primary.fixed-top.scroll .nav-link {
+    color: rgba(48, 48, 48, 0.5);
+}
+
+.nav-link:hover,
+.site-navigation-primary.fixed-top .nav-link:hover {
     color: #F6932C;
+}
+.site-navigation-primary.fixed-top.scroll .nav-link:hover {
+    color: #000;
 }
 
 h2.site-content-title a:hover {
@@ -139,6 +172,18 @@ article {
     padding: 30px;
     text-align: center;
     background-color: #2C67F6;
+}
+
+.site-navigation-primary.fixed-top {
+    transition: all 0.25s linear;
+    border-bottom: 1px solid transparent;
+}
+
+.site-navigation-primary.fixed-top.scroll {
+    background-color: #fff;
+    transition: all 0.25s linear;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 1px 5px rgba(0,0,0,.25);
 }
 
 .site-navigation-secondary a {
@@ -266,12 +311,24 @@ article {
         margin-bottom: 40px;
     }
 
+    .site.full-width {
+        margin-bottom: 0;
+    }
+
+    .site-content.full-width {
+        margin-top: 6rem;
+    }
+
     .site-container-row {
         padding: 20px;
         padding-bottom: 15px;
         margin-top: 30px;
         border-radius: 10px;
         box-shadow: rgba(3, 27, 78, 0.25) 0px 0px 20px;
+    }
+
+    .site-footer.full-width {
+        padding-bottom: 0;
     }
 }
 
