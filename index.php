@@ -15,7 +15,11 @@
  * @since Minimalist 1.0
  */
 
-get_header();
+$posts_page_id = get_option( 'page_for_posts' );
+$template_file = get_post_meta( $posts_page_id, '_wp_page_template', true );
+$template     =  str_replace( ".php", "", str_replace ( "page-", "", $template_file ) );
+
+get_header($template);
 ?>
 
 <?php
@@ -41,4 +45,4 @@ if ( $wp_query->found_posts ) {
 <?php endif; ?>
 
 <?php
-get_footer();
+get_footer($template);
