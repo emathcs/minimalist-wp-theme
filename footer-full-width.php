@@ -18,7 +18,7 @@
             </div>
             <footer id="colophon" class="site-footer full-width container-fluid">
                 <div class="site-info row">
-                    <?php get_template_part( 'template-parts/menu', 'menu', [ 'menu' => 'secondary' ] ); ?>
+                    <?php get_template_part( 'template-parts/menu/menu', 'default', array( 'menu' => 'secondary' ) ); ?>
                     <p class="site-info-powered-by">
                         <?php if ( get_theme_mod( 'minimalist_powered_by_text' ) ) : ?>
                             <?php echo get_theme_mod( 'minimalist_powered_by_text' ); ?>
@@ -33,10 +33,16 @@
         <script>
             document.addEventListener("DOMContentLoaded", function(){
                 window.addEventListener('scroll', function() {
-                    if (window.scrollY > 40) {
+                    if (window.scrollY > 10) {
                         document.getElementById('site-navigation-primary').classList.add('scroll');
+                        <?php if ( 'page' === get_post_type() && is_front_page() && get_header_image() ) : ?>
+                        document.getElementById('menu-button').setAttribute('data-bs-theme', '');
+                        <?php endif; ?>
                     } else {
                         document.getElementById('site-navigation-primary').classList.remove('scroll');
+                        <?php if ( 'page' === get_post_type() && is_front_page() && get_header_image() ) : ?>
+                        document.getElementById('menu-button').setAttribute('data-bs-theme', 'dark');
+                        <?php endif; ?>
                     }
                 });
             });

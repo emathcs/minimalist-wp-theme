@@ -9,7 +9,9 @@
  * @since Minimalist 1.0
  */
 
-get_header();
+$template = get_theme_mod( 'minimalist_template_select' );
+
+get_header($template);
 ?>
 
 <?php if ( have_posts() ) : ?>
@@ -20,4 +22,4 @@ get_header();
 <?php endif; ?>
 
 <?php
-get_footer();
+get_footer($template);

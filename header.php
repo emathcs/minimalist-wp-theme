@@ -27,7 +27,7 @@
                 <div id="page-container-row" class="site-container-row row">
                     <header id="masthead" class="site-header">
                         <div class="col-12 col-sm-12 site-header-container">
-                            <?php get_template_part( 'template-parts/menu', 'menu', [ 'menu' => 'primary' ] ); ?>
+                            <?php get_template_part( 'template-parts/menu/menu', 'default', array( 'menu' => 'primary' ) ); ?>
                         </div>
                         <?php if ( 'page' === get_post_type() && is_front_page() && get_header_image() ) : ?>
                             <div class="site-header-image">
