@@ -18,7 +18,7 @@
             </div>
             <footer id="colophon" class="site-footer full-width container-fluid">
                 <div class="site-info row">
-                    <?php get_template_part( 'template-parts/menu', 'menu', [ 'menu' => 'secondary' ] ); ?>
+                    <?php get_template_part( 'template-parts/menu/menu', 'default', array( 'menu' => 'secondary' ) ); ?>
                     <p class="site-info-powered-by">
                         <?php if ( get_theme_mod( 'minimalist_powered_by_text' ) ) : ?>
                             <?php echo get_theme_mod( 'minimalist_powered_by_text' ); ?>
