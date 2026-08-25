@@ -15,9 +15,7 @@
  * @since Minimalist 1.0
  */
 
-$posts_page_id = get_option( 'page_for_posts' );
-$template_file = get_post_meta( $posts_page_id, '_wp_page_template', true );
-$template     =  str_replace( ".php", "", str_replace ( "page-", "", $template_file ) );
+$template = get_theme_mod( 'minimalist_template_select' );
 
 get_header($template);
 ?>

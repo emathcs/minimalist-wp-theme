@@ -154,6 +154,29 @@ function minimalist_admin_customize_register( $wp_customize ) {
         )
     );
 
+    $wp_customize->add_section( 'minimalist_template' , array(
+        'title'      => __( 'Templete', 'minimalist' ),
+        'priority'   => 500,
+    ));
+
+    $wp_customize->add_setting( 'minimalist_template_select', array( 'default' => 'default' ) );
+    $wp_customize->add_control(
+        new WP_Customize_Control(
+            $wp_customize,
+            'minimalist_template_select_control',
+            array(
+                'label'    => __( 'Templete ', 'minimalist' ),
+                'section'  => 'minimalist_template',
+                'settings' => 'minimalist_template_select',
+                'type'     => 'select',
+                'choices'     => array(
+                    'default'    => __( 'Default', 'minimalist' ),
+                    'full-width' => __( 'Full width', 'minimalist' ),
+                ),
+            )
+        )
+    );
+
 }
 add_action( 'customize_register', 'minimalist_admin_customize_register' );
 
