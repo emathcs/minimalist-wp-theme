@@ -23,12 +23,26 @@
     <body>
         <?php wp_body_open(); ?>
         <div id="page" class="site full-width">
-            <header id="masthead" class="site-header container-fluid" style="background-image: url('<?php header_image(); ?>');">
+
+            <?php $class = ''; ?>
+            <?php if ( 'page' === get_post_type() && is_front_page() && get_header_image() ) : ?>
+                <style>
+                    .site-header.home {
+                        background-image: url('<?php header_image(); ?>');
+                    }
+                </style>
+                <?php $class = 'home'; ?>
+            <?php endif; ?>
+
+            <header id="masthead" class="site-header container-fluid <?php echo $class; ?>">
                 <div class="row">
                     <?php get_template_part( 'template-parts/menu/menu', 'full-width', array( 'menu' => 'primary' , 'layout' => 'full-width' ) ); ?>
                 </div>
+                <?php if ( 'page' === get_post_type() && is_front_page() && get_header_image() ) : ?>
+                    <div class="shadow">
+                    </div>
+                 <?php endif; ?>
             </header>
-
             <div id="content" class="site-content full-width container">
                 <div id="primary" class="content-area row">
                     <main id="main" class="site-main col-12 col-sm-12">
