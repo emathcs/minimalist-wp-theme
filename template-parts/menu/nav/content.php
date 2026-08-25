@@ -11,6 +11,13 @@ $classes = array(
     'secondary' => 'justify-content-center',
 );
 
+$dark = '';
+$home = '';
+if ( 'page' === get_post_type() && is_front_page() && get_header_image() ) {
+    $dark = 'dark';
+    $home = 'home';
+}
+
 ?>
 
 <?php if ( 'primary' === $menu ) : ?>
@@ -22,11 +29,11 @@ $classes = array(
             <p class="site-description"><?php echo get_bloginfo( 'description', 'display' ); ?></p>
         <?php endif; ?>
     </div>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav-<?php echo $menu ?>" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav-<?php echo $menu ?>" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" data-bs-theme="<?php echo $dark; ?>" id="menu-button">
         <span class="navbar-toggler-icon"></span>
     </button>
 <?php endif; ?>
-<div class="navbar-links navbar-collapse <?php echo $classes[$menu]; ?> navbarNav-<?php echo $menu; ?>" id="navbarNav-<?php echo $menu; ?>">
+<div class="navbar-links navbar-collapse <?php echo $classes[$menu]; ?> navbarNav-<?php echo $menu; ?> <?php echo $home; ?>" id="navbarNav-<?php echo $menu; ?>">
     <?php
     if ( has_nav_menu( $menu ) ) {
         wp_nav_menu(

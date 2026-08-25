@@ -118,7 +118,6 @@ h2.site-content-title a {
 }
 
 .site-navigation-primary.fixed-top.home .nav-link {
-    color: #eeeeee;
     color: rgba(255, 255, 255, 0.65);
 }
 
@@ -309,6 +308,17 @@ article {
 .not-results-message {
     padding-top: 1rem;
     padding-bottom: 1rem;
+}
+
+@media (max-width: 991px) {
+    .site-navigation-primary.fixed-top:not(.scroll) {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    .site-navigation-primary.fixed-top:not(.home) {
+        background-color: #fff;
+        transition: all 0.25s linear;
+        border-bottom: 1px solid #ddd;
+    }
 }
 
 /**

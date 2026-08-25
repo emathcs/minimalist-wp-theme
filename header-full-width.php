@@ -41,7 +41,7 @@
                 <?php if ( 'page' === get_post_type() && is_front_page() && get_header_image() ) : ?>
                     <div class="shadow">
                     </div>
-                 <?php endif; ?>
+                <?php endif; ?>
             </header>
             <div id="content" class="site-content full-width container">
                 <div id="primary" class="content-area row">

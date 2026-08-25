@@ -35,8 +35,14 @@
                 window.addEventListener('scroll', function() {
                     if (window.scrollY > 10) {
                         document.getElementById('site-navigation-primary').classList.add('scroll');
+                        <?php if ( 'page' === get_post_type() && is_front_page() && get_header_image() ) : ?>
+                        document.getElementById('menu-button').setAttribute('data-bs-theme', '');
+                        <?php endif; ?>
                     } else {
                         document.getElementById('site-navigation-primary').classList.remove('scroll');
+                        <?php if ( 'page' === get_post_type() && is_front_page() && get_header_image() ) : ?>
+                        document.getElementById('menu-button').setAttribute('data-bs-theme', 'dark');
+                        <?php endif; ?>
                     }
                 });
             });
