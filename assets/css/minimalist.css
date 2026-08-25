@@ -51,11 +51,11 @@ img {
     margin-bottom: 5px;
 }
 
-.site-navigation-primary.fixed-top .site-title a {
+.site-navigation-primary.fixed-top.home .site-title a {
     color: #fff;
 }
 
-.site-navigation-primary.fixed-top.scroll .site-title a {
+.site-navigation-primary.fixed-top.scroll.home .site-title a {
     color: #000;
 }
 
@@ -71,12 +71,21 @@ img {
     margin-bottom: 0;
 }
 
-.site-header.container-fluid {
+.shadow,
+.site-header.home {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
     height: 100vh;
+}
+
+.shadow {
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0 , 0.7) !important;
 }
 
 .site-header-container {
@@ -108,19 +117,20 @@ h2.site-content-title a {
     color: #2C67F6;
 }
 
-.site-navigation-primary.fixed-top .nav-link {
+.site-navigation-primary.fixed-top.home .nav-link {
     color: #eeeeee;
+    color: rgba(255, 255, 255, 0.65);
 }
 
-.site-navigation-primary.fixed-top.scroll .nav-link {
+.site-navigation-primary.fixed-top.scroll.home .nav-link {
     color: rgba(48, 48, 48, 0.5);
 }
 
 .nav-link:hover,
-.site-navigation-primary.fixed-top .nav-link:hover {
+.site-navigation-primary.fixed-top.home .nav-link:hover {
     color: #F6932C;
 }
-.site-navigation-primary.fixed-top.scroll .nav-link:hover {
+.site-navigation-primary.fixed-top.scroll.home .nav-link:hover {
     color: #000;
 }
 
@@ -183,7 +193,7 @@ article {
     background-color: #fff;
     transition: all 0.25s linear;
     border-bottom: 1px solid #ddd;
-    box-shadow: 0 1px 5px rgba(0,0,0,.25);
+    box-shadow: 0 0 transparent,0 0 transparent,0 5px 5px -4px rgba(0,0,0,.1);
 }
 
 .site-navigation-secondary a {
