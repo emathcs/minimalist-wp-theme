@@ -33,7 +33,7 @@
         <script>
             document.addEventListener("DOMContentLoaded", function(){
                 window.addEventListener('scroll', function() {
-                    if (window.scrollY > 40) {
+                    if (window.scrollY > 10) {
                         document.getElementById('site-navigation-primary').classList.add('scroll');
                     } else {
                         document.getElementById('site-navigation-primary').classList.remove('scroll');
