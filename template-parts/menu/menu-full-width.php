@@ -8,7 +8,7 @@ $dark = ( 'home' === $home && 'full-width' === $template ) ? 'dark' : '';
 ?>
 
 <nav id="site-navigation-<?php echo $menu; ?>" class="main-navigation navbar navbar-expand-lg site-navigation-<?php echo $menu; ?> fixed-top <?php echo $home; ?> col-12 col-sm-12">
-    <div class="container">
+    <div class="site-navigation-container container">
         <?php
         get_template_part(
             'template-parts/menu/nav/content',
