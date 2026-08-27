@@ -25,19 +25,18 @@ $home = $is_home ? 'home' : '' ;
     </head>
     <body>
         <?php wp_body_open(); ?>
-        <div id="page" class="site">
-            <div id="page-container" class="site-container container">
-                <div id="page-container-row" class="site-container-row row">
-                    <header id="masthead" class="site-header">
-                        <div class="col-12 col-sm-12 site-header-container">
-                            <?php get_template_part( 'template-parts/menu/menu', 'default', array( 'menu' => 'primary', 'template' => 'default', 'home' => $home ) ); ?>
+        <div id="page" class="site container">
+            <div id="page-box" class="site-box row">
+                <header id="masthead" class="site-header">
+                    <div class="col-12 col-sm-12 site-header-container">
+                        <?php get_template_part( 'template-parts/menu/menu', 'default', array( 'menu' => 'primary', 'template' => 'default', 'home' => $home ) ); ?>
+                    </div>
+                    <?php if ( $is_home && get_header_image() ) : ?>
+                        <div class="site-header-image">
+                            <img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
                         </div>
-                        <?php if ( $is_home && get_header_image() ) : ?>
-                            <div class="site-header-image">
-                                <img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
-                            </div>
-                        <?php endif; ?>
-                    </header>
-                    <div id="content" class="site-content">
-                        <div id="primary" class="content-area">
-                            <main id="main" class="site-main col-12 col-sm-12">
+                    <?php endif; ?>
+                </header>
+                <div id="content" class="site-content">
+                    <div id="primary" class="content-area">
+                        <main id="main" class="site-main col-12 col-sm-12">
