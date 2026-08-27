@@ -1,8 +1,8 @@
 <?php
 
-$menu = isset ( $args['menu'] ) ? $args['menu'] : null ;
-$menu = '' === $menu ? 'none' : $menu ;
-
+$home = isset ( $args['home'] ) ? $args['home'] : '' ;
+$menu = isset ( $args['menu'] ) ? $args['menu'] : 'none' ;
+$template = isset ( $args['template'] ) ? $args['template'] : 'default' ;
 $description = isset ( $args['description'] ) ? $args['description'] : true ;
 
 $classes = array(
@@ -10,13 +10,6 @@ $classes = array(
     'primary'   => 'justify-content-end collapse',
     'secondary' => 'justify-content-center',
 );
-
-$dark = '';
-$home = '';
-if ( 'page' === get_post_type() && is_front_page() && get_header_image() ) {
-    $dark = 'dark';
-    $home = 'home';
-}
 
 ?>
 
