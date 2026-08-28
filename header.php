@@ -34,9 +34,11 @@ $home = $is_home ? 'home' : '' ;
                     <?php if ( $is_home && get_header_image() ) : ?>
                         <div class="site-header-image">
                             <img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+                            <div class="overlay">
+                            </div>
                         </div>
                     <?php endif; ?>
                 </header>
-                <div id="content" class="site-content">
+                <div id="content" class="site-content <?php echo $home; ?>">
                     <div id="primary" class="content-area">
                         <main id="main" class="site-main col-12 col-sm-12">
