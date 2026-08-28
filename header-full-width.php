@@ -37,11 +37,11 @@ $home = $is_home ? 'home' : '' ;
                 <div class="row">
                     <?php get_template_part( 'template-parts/menu/menu', 'full-width', array( 'menu' => 'primary' , 'template' => 'full-width', 'home' => $home ) ); ?>
                 </div>
-                <?php if ( 'page' === get_post_type() && is_front_page() && get_header_image() ) : ?>
-                    <div class="shadow">
+                <?php if ( $is_home && get_header_image() ) : ?>
+                    <div class="overlay full-width">
                     </div>
                 <?php endif; ?>
             </header>
-            <div id="content" class="site-content container">
+            <div id="content" class="site-content full-width container <?php echo $home; ?>">
                 <div id="primary" class="content-area full-width row">
                     <main id="main" class="site-main col-12 col-sm-12">

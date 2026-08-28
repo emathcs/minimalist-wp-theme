@@ -72,7 +72,6 @@ img {
     margin-bottom: 0;
 }
 
-.shadow,
 .site-header.home {
     background-size: cover;
     background-position: center;
@@ -81,12 +80,18 @@ img {
     height: 100vh;
 }
 
-.shadow {
-    top: 0;
+.overlay {
     left: 0;
+    bottom: 0;
     width: 100%;
+    height: 20%;
     position: absolute;
-    background-color: rgba(0, 0, 0 , 0.7) !important;
+    background-color: rgba(0, 0, 0 , 0.7);
+}
+
+.overlay.full-width {
+    top: 0;
+    height: 100%;
 }
 
 .site-header-container {
@@ -95,6 +100,7 @@ img {
 }
 
 .site-header-image {
+    position: relative;
     margin-bottom: 1.75rem;
 }
 
@@ -109,6 +115,14 @@ img {
 
 h2.site-content-title a {
     font-size: calc(1.325rem + 0.9vw);
+}
+
+.site-content.home {
+    margin-top: 1rem;
+}
+
+.site-content.full-width {
+    margin-top: 5rem;
 }
 
 /* Menu */
@@ -341,7 +355,11 @@ article {
     }
 
     .site-content.full-width {
-        margin-top: 6rem;
+        margin-top: 5rem;
+    }
+
+    .site-content.full-width.home {
+        margin-top: 3rem;
     }
 
     .site-box {
@@ -358,6 +376,10 @@ article {
 }
 
 @media (min-width: 768px) {
+    .overlay {
+        height: 15%;
+    }
+
     .site-box {
         margin-top: 40px;
     }
@@ -367,6 +389,10 @@ article {
     .site-title a,
     .site-content-title {
         font-size: 2.5rem;
+    }
+
+    .overlay {
+        height: 10%;
     }
 
     h2.site-content-title a {
