@@ -11,6 +11,7 @@
  * @since Minimalist 1.0
  */
 
+$dbt = '';
 $is_home = 'page' === get_post_type() && is_front_page();
 $home = $is_home ? 'home' : '' ;
 
@@ -32,10 +33,11 @@ $home = $is_home ? 'home' : '' ;
                         background-image: url('<?php header_image(); ?>');
                     }
                 </style>
+                <?php $dbt = 'dark'; ?>
             <?php endif; ?>
             <header id="masthead" class="site-header container-fluid <?php echo $home; ?>">
                 <div class="row">
-                    <?php get_template_part( 'template-parts/menu/menu', 'full-width', array( 'menu' => 'primary' , 'template' => 'full-width', 'home' => $home ) ); ?>
+                    <?php get_template_part( 'template-parts/menu/menu', 'full-width', array( 'menu' => 'primary', 'home' => $home, 'data-bs-theme' => $dbt ) ); ?>
                 </div>
                 <?php if ( $is_home && get_header_image() ) : ?>
                     <div class="overlay full-width">

@@ -29,7 +29,7 @@ $home = $is_home ? 'home' : '' ;
             <div id="page-box" class="site-box row">
                 <header id="masthead" class="site-header">
                     <div class="col-12 col-sm-12 site-header-container">
-                        <?php get_template_part( 'template-parts/menu/menu', 'default', array( 'menu' => 'primary', 'template' => 'default', 'home' => $home ) ); ?>
+                        <?php get_template_part( 'template-parts/menu/menu', 'default', array( 'menu' => 'primary', 'home' => $home ) ); ?>
                     </div>
                     <?php if ( $is_home && get_header_image() ) : ?>
                         <div class="site-header-image">
