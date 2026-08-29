@@ -5,6 +5,7 @@ $show_form   = isset( $args['show_form'] ) ? $args['show_form'] : false;
 $show_button = isset( $args['show_button'] ) ? $args['show_button'] : true;
 
 ?>
+
 <div class="accordion accordion-flush search" id="accordion-search">
     <div class="accordion-item">
         <div class="accordion-header">

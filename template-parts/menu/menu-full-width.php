@@ -2,8 +2,7 @@
 
 $home = isset ( $args['home'] ) ? $args['home'] : '' ;
 $menu = isset ( $args['menu'] ) ? $args['menu'] : 'none' ;
-$template = isset ( $args['template'] ) ? $args['template'] : 'full-width' ;
-$dark = ( 'home' === $home && 'full-width' === $template ) ? 'dark' : '';
+$dbt  = isset ( $args['data-bs-theme'] ) ? $args['data-bs-theme'] : '' ;
 
 ?>
 
@@ -14,11 +13,10 @@ $dark = ( 'home' === $home && 'full-width' === $template ) ? 'dark' : '';
             'template-parts/menu/nav/content',
             '',
             array(
-                'menu' => $menu,
-                'template' => $template,
-                'home' => $home,
-                'dark' => $dark ,
-                'description' => false
+                'menu'          => $menu,
+                'template'      => 'full-width',
+                'home'          => $home,
+                'data-bs-theme' => $dbt,
             )
         ); ?>
     </div>

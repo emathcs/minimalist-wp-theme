@@ -2,10 +2,11 @@
 
 $home = isset ( $args['home'] ) ? $args['home'] : '' ;
 $menu = isset ( $args['menu'] ) ? $args['menu'] : 'none' ;
+$dbt  = isset ( $args['data-bs-theme'] ) ? $args['data-bs-theme'] : '' ;
 $template = isset ( $args['template'] ) ? $args['template'] : 'default' ;
-$description = isset ( $args['description'] ) ? $args['description'] : true ;
+$description = isset ( $args['description'] ) ? $args['description'] : false ;
 
-$classes = array(
+$menu_class = array(
     'none'      => '',
     'primary'   => 'justify-content-end collapse',
     'secondary' => 'justify-content-center',
@@ -22,11 +23,11 @@ $classes = array(
             <p class="site-description"><?php echo get_bloginfo( 'description', 'display' ); ?></p>
         <?php endif; ?>
     </div>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav-<?php echo $menu ?>" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" data-bs-theme="<?php echo $dark; ?>" id="menu-button">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav-<?php echo $menu ?>" aria-controls="navbarNav-<?php echo $menu ?>" aria-expanded="false" aria-label="Toggle navigation" data-bs-theme="<?php echo $dbt; ?>" id="menu-button-<?php echo $menu; ?>">
         <span class="navbar-toggler-icon"></span>
     </button>
 <?php endif; ?>
-<div class="navbar-links navbar-collapse <?php echo $classes[$menu]; ?> navbarNav-<?php echo $menu; ?> <?php echo $home; ?>" id="navbarNav-<?php echo $menu; ?>">
+<div class="navbar-links navbar-collapse <?php echo $menu_class[$menu]; ?> navbarNav-<?php echo $menu; ?> <?php echo $home; ?>" id="navbarNav-<?php echo $menu; ?>">
     <?php
     if ( has_nav_menu( $menu ) ) {
         wp_nav_menu(
