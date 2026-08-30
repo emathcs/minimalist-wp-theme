@@ -6,7 +6,7 @@ WordPress theme.
 
 This is a minimalist WordPress theme focused on managing static pages.
 
-It also allows to manage posts, just like a blog.
+It also allows to manage posts, just like a blog but with a minimalist approach.
 
 The goal of this theme is providing the most minimalist foundation possible for building websites.
 
@@ -59,3 +59,9 @@ Currently, it offers two template variants:
     - footer.php
       - template-parts/menu/menu-defautl.php
         - template-parts/menu/nav/content.php
+
+# NOTE
+
+- This theme has been designed for building sites with static pages, without a blog or with a minimalist one.
+- This theme includes a comments section for posts, but it is recommended to use the posts for information rather than discussion.
+- Future versions will add features such as tags, sidebar and other elements.

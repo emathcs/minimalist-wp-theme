@@ -10,7 +10,7 @@
 // Theme version.
 if ( ! defined( 'T_VERSION' ) ) {
     // Replace the version number of the theme on each release.
-    define( 'T_VERSION', '0.1.0' );
+    define( 'T_VERSION', '1.0.0' );
 }
 
 /**
