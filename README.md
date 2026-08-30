@@ -26,7 +26,6 @@ Currently, it offers two template variants:
     - footer.php
       - template-parts/menu/menu-defautl.php
         - template-parts/menu/nav/content.php
-
 - Blog:
   - index.php
     - header.php
@@ -38,7 +37,6 @@ Currently, it offers two template variants:
     - footer.php
       - template-parts/menu/menu-defautl.php
         - template-parts/menu/nav/content.php
-
 - Post:
   - single.php
     - header.php
@@ -48,7 +46,6 @@ Currently, it offers two template variants:
     - footer.php
       - template-parts/menu/menu-defautl.php
         - template-parts/menu/nav/content.php
-
 - Not found page:
   - index.php
     - header.php
