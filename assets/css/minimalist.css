@@ -338,6 +338,14 @@ article {
         transition: all 0.25s linear;
         border-bottom: 1px solid #ddd;
     }
+
+    .site-navigation-primary .menu-item .dropdown-menu {
+        display: block;
+        border: 0;
+        margin-left: 1rem;
+        padding: 0;
+        background-color: transparent;
+    }
 }
 
 /**
@@ -382,6 +390,22 @@ article {
 
     .site-box {
         margin-top: 40px;
+    }
+}
+
+@media (min-width: 992px) {
+    .site-navigation-primary.fixed-top.home .menu-item .dropdown-menu {
+        background-color: rgba(0, 0, 0, .5);
+    }
+
+    .site-navigation-primary.fixed-top.scroll.home .menu-item .dropdown-menu {
+        background-color: #fff ;
+    }
+
+    .navbar .menu-item:hover .dropdown-menu {
+        display: block;
+        border: 0;
+        box-shadow: 0 0 20px 0 rgba(0,0,0,.1);
     }
 }
 
