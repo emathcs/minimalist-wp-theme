@@ -136,12 +136,8 @@ h2.site-content-title a {
     color: #2C67F6;
 }
 
-.site-navigation-primary.fixed-top.home .nav-link {
+.site-navigation-primary.fixed-top:not(.scroll).home .nav-link {
     color: rgba(255, 255, 255, 0.65);
-}
-
-.site-navigation-primary.fixed-top.scroll.home .nav-link {
-    color: rgba(48, 48, 48, 0.5);
 }
 
 .nav-link:hover,
