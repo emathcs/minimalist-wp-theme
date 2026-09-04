@@ -136,12 +136,8 @@ h2.site-content-title a {
     color: #2C67F6;
 }
 
-.site-navigation-primary.fixed-top.home .nav-link {
+.site-navigation-primary.fixed-top:not(.scroll).home .nav-link {
     color: rgba(255, 255, 255, 0.65);
-}
-
-.site-navigation-primary.fixed-top.scroll.home .nav-link {
-    color: rgba(48, 48, 48, 0.5);
 }
 
 .nav-link:hover,
@@ -338,6 +334,14 @@ article {
         transition: all 0.25s linear;
         border-bottom: 1px solid #ddd;
     }
+
+    .site-navigation-primary .menu-item .dropdown-menu {
+        display: block;
+        border: 0;
+        margin-left: 1rem;
+        padding: 0;
+        background-color: transparent;
+    }
 }
 
 /**
@@ -382,6 +386,47 @@ article {
 
     .site-box {
         margin-top: 40px;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar .menu-item .dropdown-menu {
+        padding: 0;
+        border: 0;
+    }
+
+    .site-navigation-primary.fixed-top.home .menu-item .dropdown-menu {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .site-navigation-primary.fixed-top.scroll.home .menu-item .dropdown-menu {
+        background-color: #fff ;
+    }
+
+    .navbar .menu-item:hover .dropdown-menu {
+        display: block;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    .site-navigation-primary .menu-item .dropdown-menu .menu-item:hover,
+    .site-navigation-primary.fixed-top.scroll.home .menu-item .dropdown-menu .menu-item:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    .site-navigation-primary.fixed-top.home .menu-item .dropdown-menu .menu-item:hover {
+        background-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .site-navigation-primary .menu-item .dropdown-menu .menu-item:first-child:hover {
+        border-radius: inherit;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .site-navigation-primary .menu-item .dropdown-menu .menu-item:last-child:hover {
+        border-radius: inherit;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
     }
 }
 
