@@ -5,9 +5,9 @@
  */
 
 /* Fonts */
-* {
-    font: 16px/26px 'Poppins', sans-serif;
-    font-family: 'Montserrat', sans-serif;
+body {
+    font: 16px/26px Montserrat, sans-serif;
+    -webkit-font-smoothing: antialiased;
 }
 
 h1,
