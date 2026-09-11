@@ -10,7 +10,7 @@
 // Theme version.
 if ( ! defined( 'T_VERSION' ) ) {
     // Replace the version number of the theme on each release.
-    define( 'T_VERSION', '1.0.0' );
+    define( 'T_VERSION', '1.1.0' );
 }
 
 /**
@@ -123,7 +123,7 @@ if ( ! defined( 'BS_VERSION' ) ) {
 function minimalist_scripts() {
     wp_enqueue_style( 'minimalist-style', get_stylesheet_uri(), array(), T_VERSION );
     wp_enqueue_style( 'bootstrap_css', get_stylesheet_directory_uri() . '/assets/css/bootstrap.min.css', array(), BS_VERSION );
-    wp_enqueue_style( 'minimalist_css', get_stylesheet_directory_uri() . '/assets/css/minimalist.min.css', array(), T_VERSION );
+    wp_enqueue_style( 'minimalist_css', get_stylesheet_directory_uri() . '/assets/css/minimalist.css', array(), T_VERSION );
     wp_enqueue_style( 'montserrat_font', get_stylesheet_directory_uri() . '/assets/fonts/montserrat.css', array(), T_VERSION );
     wp_enqueue_script( 'bootstrap_js', get_stylesheet_directory_uri() . '/assets/js/bootstrap.min.js', array(), BS_VERSION );
 }
