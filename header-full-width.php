@@ -13,7 +13,7 @@
 
 $dbt = '';
 $is_home = 'page' === get_post_type() && is_front_page();
-$home = $is_home ? 'home' : '' ;
+$home = $is_home && get_header_image() ? 'home' : '' ;
 
 ?>
 
